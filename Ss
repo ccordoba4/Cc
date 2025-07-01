@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro de Teléfono - Stardusoul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Reset básico */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    #contenedor {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      overflow: hidden;
+    }
+    header {
+      background: #6c63ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+      display: block;
+    }
+    @media (max-width: 440px) {
+      iframe {
+        height: 550px;
+      }
+      header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="contenedor">
+    <header>Registra tu número de teléfono</header>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSe-1lTi3lqMfujjZLKXh8pyxx2OyPjQOqErOkeGndpV44IQYA/viewform?embedded=true" 
+      allowfullscreen
+      loading="lazy"
+      title="Formulario Registro Teléfono">
+      Cargando formulario...
+    </iframe>
+  </main>
+</body>
+</html>
