@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro Teléfono - Combinado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      min-height: 100vh;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .container {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    h2 {
+      margin-top: 0;
+      color: #6c63ff;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    input[type="tel"] {
+      padding: 12px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline-offset: 2px;
+      outline-color: transparent;
+      transition: outline-color 0.3s ease;
+    }
+    input[type="tel"]:focus {
+      outline-color: #6c63ff;
+      border-color: #6c63ff;
+    }
+    button {
+      background-color: #6c63ff;
+      color: white;
+      font-size: 1.2rem;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #574dcf;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 440px) {
+      iframe {
+        height: 550px;
+      }
+      body {
+        padding: 20px 10px;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Formulario personalizado que envía a Google Forms -->
+  <section class="container">
+    <h2>Formulario personalizado</h2>
+    <form 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSe-1lTi3lqMfujjZLKXh8pyxx2OyPjQOqErOkeGndpV44IQYA/formResponse" 
+      method="POST" 
+      target="_blank"
+    >
+      <input 
+        name="entry.1426215486" 
+        type="tel" 
+        placeholder="+34 123456789" 
+        required 
+        aria-label="Número de teléfono"
+      />
+      <button type="submit">Guardar número</button>
+    </form>
+  </section>
+
+  <!-- Formulario embebido oficial de Google Forms -->
+  <section class="container">
+    <h2>Formulario embebido oficial</h2>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSe-1lTi3lqMfujjZLKXh8pyxx2OyPjQOqErOkeGndpV44IQYA/viewform?embedded=true" 
+      loading="lazy" 
+      title="Formulario Registro Teléfono"
+      allowfullscreen
+    >
+      Cargando formulario...
+    </iframe>
+  </section>
+</body>
+</html>
