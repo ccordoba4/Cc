@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro Teléfono</title>
+  <style>
+    body { display:flex; justify-content:center; align-items:center; height:100vh; margin:0; }
+    #mensaje { font-size:3rem; text-align:center; margin-bottom:1rem; }
+    #telefono { font-size:1.5rem; width:300px; padding:10px; }
+    #enviar { font-size:1.5rem; padding:10px 20px; margin-top:1rem; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="mensaje">Introduce tu número de teléfono</div>
+    <input id="telefono" type="tel" placeholder="+34 123456789" />
+    <button id="enviar">Guardar número</button>
+  </div>
+  <script>
+    const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSe-1lTi3lqMfujjZLKXh8pyxx2OyPjQOqErOkeGndpV44IQYA/formResponse';
+    const entryID = 'entry.1426215486';
+
+    document.getElementById('enviar').addEventListener('click', function () {
+      const num = document.getElementById('telefono').value.trim();
+      if (!num) {
+        alert('Por favor, indica un número.');
+        return;
+      }
+
+      const data = new FormData();
+      data.append(entryID, num);
+
+      fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: data,
+      })
+      .then(() => alert('Número guardado correctamente.'))
+      .catch(() => alert('Error al guardar el número.'));
+    });
+  </script>
+</body>
+</html>
